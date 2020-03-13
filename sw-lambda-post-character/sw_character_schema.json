@@ -1,0 +1,490 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {
+        "skill": {
+            "type": "object",
+            "properties": {
+                "career": {
+                    "type": "boolean"
+                },
+                "pool": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "minItems": 5,
+                    "maxItems": 5
+                }
+            },
+            "required": [
+                "career",
+                "pool"
+            ]
+        },
+        "inventoryItem": {
+            "type": "object",
+            "properties": {
+                "type_key": {
+                    "type": "string"
+                },
+                "condition": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "minItems": 3,
+                    "maxItems": 3
+                },
+                "modification": {
+                    "type": "object"
+                },
+                "equiped": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "id",
+                "type_key",
+                "condition",
+                "modification",
+                "equiped"
+            ]
+        }
+    },
+    "type": "object",
+    "properties": {
+        "character": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "object",
+                    "properties": {
+                        "avatar": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "species": {
+                            "type": "string"
+                        },
+                        "career": {
+                            "type": "string"
+                        },
+                        "gender": {
+                            "type": "string"
+                        },
+                        "height": {
+                            "type": "string"
+                        },
+                        "hair": {
+                            "type": "string"
+                        },
+                        "age": {
+                            "type": "string"
+                        },
+                        "build": {
+                            "type": "string"
+                        },
+                        "eyes": {
+                            "type": "string"
+                        },
+                        "motivation": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "avatar",
+                        "name",
+                        "species",
+                        "career",
+                        "gender",
+                        "height",
+                        "hair",
+                        "age",
+                        "build",
+                        "eyes",
+                        "motivation"
+                    ]
+                },
+                "obligations": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "description": {
+                                "type": "string"
+                            },
+                            "size": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "description",
+                            "size"
+                        ]
+                    }
+                },
+                "morality": {
+                    "type": "object",
+                    "properties": {
+                        "strength": {
+                            "type": "string"
+                        },
+                        "weakness": {
+                            "type": "string"
+                        },
+                        "conflict": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "strength",
+                        "weakness",
+                        "conflict",
+                        "value"
+                    ]
+                },
+                "experience": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "integer"
+                        },
+                        "available": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "total",
+                        "available"
+                    ]
+                },
+                "background": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "description",
+                "obligations",
+                "morality",
+                "experience",
+                "background"
+            ]
+        },
+        "skills": {
+            "type": "object",
+            "properties": {
+                "characteristics": {
+                    "type": "object",
+                    "properties": {
+                        "brawn": {
+                            "type": "integer"
+                        },
+                        "agility": {
+                            "type": "integer"
+                        },
+                        "intelect": {
+                            "type": "integer"
+                        },
+                        "cunning": {
+                            "type": "integer"
+                        },
+                        "willpower": {
+                            "type": "integer"
+                        },
+                        "presence": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "brawn",
+                        "agility",
+                        "intelect",
+                        "cunning",
+                        "willpower",
+                        "presence"
+                    ]
+                },
+                "values": {
+                    "type": "object",
+                    "properties": {
+                        "astrogation": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "athletics": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "charm": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "coercion": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "computers": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "cool": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "coordination": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "deception": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "discipline": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "leadership": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "mechanics": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "medicine": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "negotiation": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "perception": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "piloting_planetery": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "piloting_space": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "resilience": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "skullduggery": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "stealth": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "streetwise": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "survival": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "vigilance": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "core_worlds": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "education": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "lore": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "outer_rim": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "underworld": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "warfare": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "xenology": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "brawl": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "gunnery": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "lightsaber": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "melee": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "ranged_heavy": {
+                            "$ref": "#/definitions/skill"
+                        },
+                        "ranged_light": {
+                            "$ref": "#/definitions/skill"
+                        }
+                    },
+                    "required": [
+                        "astrogation",
+                        "athletics",
+                        "charm",
+                        "coercion",
+                        "computers",
+                        "cool",
+                        "coordination",
+                        "deception",
+                        "discipline",
+                        "leadership",
+                        "mechanics",
+                        "medicine",
+                        "negotiation",
+                        "perception",
+                        "piloting_planetery",
+                        "piloting_space",
+                        "resilience",
+                        "skullduggery",
+                        "stealth",
+                        "streetwise",
+                        "survival",
+                        "vigilance",
+                        "core_worlds",
+                        "education",
+                        "lore",
+                        "outer_rim",
+                        "underworld",
+                        "warfare",
+                        "xenology",
+                        "brawl",
+                        "gunnery",
+                        "lightsaber",
+                        "melee",
+                        "ranged_heavy",
+                        "ranged_light"
+                    ]
+                }
+            },
+            "required": [
+                "characteristics",
+                "values"
+            ]
+        },
+        "combat": {
+            "type": "object",
+            "properties": {
+                "combat_stats": {
+                    "type": "object",
+                    "properties": {
+                        "soak": {
+                            "type": "integer"
+                        },
+                        "wounds": {
+                            "type": "object",
+                            "properties": {
+                                "threshold": {
+                                    "type": "integer"
+                                },
+                                "current": {
+                                    "type": "integer"
+                                }
+                            },
+                            "required": [
+                                "threshold",
+                                "current"
+                            ]
+                        },
+                        "defense": {
+                            "type": "object",
+                            "properties": {
+                                "melee": {
+                                    "type": "integer"
+                                },
+                                "range": {
+                                    "type": "integer"
+                                }
+                            },
+                            "required": [
+                                "melee",
+                                "range"
+                            ]
+                        },
+                        "strain": {
+                            "type": "object",
+                            "properties": {
+                                "threshold": {
+                                    "type": "integer"
+                                },
+                                "current": {
+                                    "type": "integer"
+                                }
+                            },
+                            "required": [
+                                "threshold",
+                                "current"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "soak",
+                        "wounds",
+                        "defense",
+                        "strain"
+                    ]
+                },
+                "critical_injuries": {
+                    "type": "array",
+                    "items": [
+                        {
+                            "type": "object",
+                            "properties": {
+                                "servierity": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "integer"
+                                    },
+                                    "minItems": 4,
+                                    "maxItems": 4
+                                },
+                                "description": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "servierity",
+                                "description"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "combat_stats",
+                "critical_injuries"
+            ]
+        },
+        "inventory": {
+            "type": "object",
+            "properties": {
+                "weapons": {
+                    "type": "object",
+                    "patternProperties": {
+                        "^[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}$": {
+                            "$ref": "#/definitions/inventoryItem"
+                        }
+                    }
+                },
+                "armor": {
+                    "type": "object",
+                    "patternProperties": {
+                        "^[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}$": {
+                            "$ref": "#/definitions/inventoryItem"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "weapons",
+                "armor"
+            ]
+        }
+    },
+    "required": [
+        "character",
+        "skills",
+        "combat",
+        "inventory"
+    ]
+}

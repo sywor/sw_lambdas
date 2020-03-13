@@ -1,0 +1,15 @@
+{
+  "name": "sw-lambda-post-user",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "zip -rq function.zip index.js node_modules && aws lambda update-function-code --function-name sw_post_character --zip-file fileb://function.zip && rm function.zip"
+  },
+  "author": "Ossian Petri",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^7.0.2"
+  }
+}
