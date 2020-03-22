@@ -1,0 +1,85 @@
+[
+    {
+        "category": "description",
+        "data": {
+            "age": 0,
+            "avatar": "N/A",
+            "build": "N/A",
+            "career": "N/A",
+            "eyes": "N/A",
+            "gender": "N/A",
+            "hair": "N/A",
+            "height": "N/A",
+            "motivation": "N/A",
+            "name": "N/A",
+            "species": "N/A"
+        }
+    },
+    {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "properties": {
+            "category": {
+                "enum": [
+                    "description"
+                ],
+                "type": "string"
+            },
+            "data": {
+                "properties": {
+                    "age": {
+                        "type": "integer"
+                    },
+                    "avatar": {
+                        "type": "string"
+                    },
+                    "build": {
+                        "type": "string"
+                    },
+                    "career": {
+                        "type": "string"
+                    },
+                    "eyes": {
+                        "type": "string"
+                    },
+                    "gender": {
+                        "type": "string"
+                    },
+                    "hair": {
+                        "type": "string"
+                    },
+                    "height": {
+                        "type": "string"
+                    },
+                    "motivation": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "species": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "age",
+                    "avatar",
+                    "build",
+                    "career",
+                    "eyes",
+                    "gender",
+                    "hair",
+                    "height",
+                    "motivation",
+                    "name",
+                    "species"
+                ],
+                "type": "object"
+            }
+        },
+        "required": [
+            "category",
+            "data"
+        ],
+        "type": "object"
+    }
+]

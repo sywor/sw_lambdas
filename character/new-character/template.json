@@ -1,0 +1,763 @@
+[
+    {
+        "RequestItems": {
+            "sw_character_description": [
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "category": "description",
+                            "characterId": "CHARACTER_ID",
+                            "data": {
+                                "age": 0,
+                                "avatar": "N/A",
+                                "build": "N/A",
+                                "career": "N/A",
+                                "eyes": "N/A",
+                                "gender": "N/A",
+                                "hair": "N/A",
+                                "height": "N/A",
+                                "motivation": "N/A",
+                                "name": "N/A",
+                                "species": "N/A"
+                            }
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "category": "obligations",
+                            "characterId": "CHARACTER_ID",
+                            "data": []
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "category": "morality",
+                            "characterId": "CHARACTER_ID",
+                            "data": {
+                                "conflict": "N/A",
+                                "strength": "N/A",
+                                "value": 0,
+                                "weakness": "N/A"
+                            }
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "category": "experience",
+                            "characterId": "CHARACTER_ID",
+                            "data": {
+                                "available": 0,
+                                "total": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "category": "combat",
+                            "characterId": "CHARACTER_ID",
+                            "data": {
+                                "defense": {
+                                    "melee": 0,
+                                    "range": 0
+                                },
+                                "soak": 0,
+                                "strain": {
+                                    "current": 0,
+                                    "threshold": 0
+                                },
+                                "wounds": {
+                                    "current": 0,
+                                    "threshold": 0
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "category": "critical_injuries",
+                            "characterId": "CHARACTER_ID",
+                            "data": []
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "category": "background",
+                            "characterId": "CHARACTER_ID",
+                            "data": "N/A"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "category": "characteristics",
+                            "characterId": "CHARACTER_ID",
+                            "data": {
+                                "agility": 0,
+                                "brawn": 0,
+                                "cunning": 0,
+                                "intelect": 0,
+                                "presence": 0,
+                                "willpower": 0
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "RequestItems": {
+            "sw_character_skills": [
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "astrogation"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "athletics"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "charm"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "coercion"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "computers"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "cool"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "coordination"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "deception"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "discipline"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "leadership"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "mechanics"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    3
+                                ]
+                            },
+                            "skillName": "medicine"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "negotiation"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "perception"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "piloting_planetery"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "piloting_space"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "resilience"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "skullduggery"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "stealth"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "streetwise"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "survival"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "vigilance"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "core_worlds"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "education"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "lore"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "RequestItems": {
+            "sw_character_skills": [
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "outer_rim"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "underworld"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "warfare"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "xenology"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "brawl"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "gunnery"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "lightsaber"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "melee"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "ranged_heavy"
+                        }
+                    }
+                },
+                {
+                    "PutRequest": {
+                        "Item": {
+                            "characterId": "CHARACTER_ID",
+                            "skill": {
+                                "career": false,
+                                "pool": [
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ]
+                            },
+                            "skillName": "ranged_light"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+]

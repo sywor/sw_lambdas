@@ -1,0 +1,75 @@
+[
+    {
+        "career": true,
+        "pool": [
+            1,
+            1,
+            1,
+            0,
+            0
+        ],
+        "skillName": "astrogation"
+    },
+    {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "properties": {
+            "career": {
+                "type": "boolean"
+            },
+            "pool": {
+                "items": {
+                    "type": "integer"
+                },
+                "maxItems": 5,
+                "minItems": 5,
+                "type": "array"
+            },
+            "skillName": {
+                "enum": [
+                    "astrogation",
+                    "athletics",
+                    "charm",
+                    "coercion",
+                    "computers",
+                    "cool",
+                    "coordination",
+                    "deception",
+                    "discipline",
+                    "leadership",
+                    "mechanics",
+                    "medicine",
+                    "negotiation",
+                    "perception",
+                    "piloting_planetery",
+                    "piloting_space",
+                    "resilience",
+                    "skullduggery",
+                    "stealth",
+                    "streetwise",
+                    "survival",
+                    "vigilance",
+                    "core_worlds",
+                    "education",
+                    "lore",
+                    "outer_rim",
+                    "underworld",
+                    "warfare",
+                    "xenology",
+                    "brawl",
+                    "gunnery",
+                    "lightsaber",
+                    "melee",
+                    "ranged_heavy",
+                    "ranged_light"
+                ],
+                "type": "string"
+            }
+        },
+        "required": [
+            "skillName",
+            "career",
+            "pool"
+        ],
+        "type": "object"
+    }
+]

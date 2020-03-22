@@ -1,0 +1,47 @@
+[
+    {
+        "category": "obligations",
+        "data": [
+            {
+                "description": "Oath",
+                "size": 8
+            }
+        ]
+    },
+    {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "properties": {
+            "category": {
+                "enum": [
+                    "obligations"
+                ],
+                "type": "string"
+            },
+            "data": {
+                "items": [
+                    {
+                        "properties": {
+                            "description": {
+                                "type": "string"
+                            },
+                            "size": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "description",
+                            "size"
+                        ],
+                        "type": "object"
+                    }
+                ],
+                "type": "array"
+            }
+        },
+        "required": [
+            "category",
+            "data"
+        ],
+        "type": "object"
+    }
+]

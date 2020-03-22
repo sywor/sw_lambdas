@@ -1,0 +1,40 @@
+[
+    {
+        "category": "experience",
+        "data": {
+            "available": 0,
+            "total": 0
+        }
+    },
+    {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "properties": {
+            "category": {
+                "enum": [
+                    "experience"
+                ],
+                "type": "string"
+            },
+            "data": {
+                "properties": {
+                    "available": {
+                        "type": "integer"
+                    },
+                    "total": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "available",
+                    "total"
+                ],
+                "type": "object"
+            }
+        },
+        "required": [
+            "category",
+            "data"
+        ],
+        "type": "object"
+    }
+]

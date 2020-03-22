@@ -1,0 +1,50 @@
+[
+    {
+        "category": "morality",
+        "data": {
+            "conflict": "N/A",
+            "strength": "N/A",
+            "value": 0,
+            "weakness": "N/A"
+        }
+    },
+    {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "properties": {
+            "category": {
+                "enum": [
+                    "morality"
+                ],
+                "type": "string"
+            },
+            "data": {
+                "properties": {
+                    "conflict": {
+                        "type": "string"
+                    },
+                    "strength": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "integer"
+                    },
+                    "weakness": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "weakness",
+                    "strength",
+                    "value",
+                    "conflict"
+                ],
+                "type": "object"
+            }
+        },
+        "required": [
+            "category",
+            "data"
+        ],
+        "type": "object"
+    }
+]

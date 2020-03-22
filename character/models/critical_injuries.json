@@ -1,0 +1,57 @@
+[
+    {
+        "category": "critical_injuries",
+        "data": [
+            {
+                "description": "some description",
+                "servierity": [
+                    1,
+                    1,
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "properties": {
+            "category": {
+                "enum": [
+                    "critical_injuries"
+                ],
+                "type": "string"
+            },
+            "data": {
+                "items": [
+                    {
+                        "properties": {
+                            "description": {
+                                "type": "string"
+                            },
+                            "servierity": {
+                                "items": {
+                                    "type": "integer"
+                                },
+                                "maxItems": 4,
+                                "minItems": 4,
+                                "type": "array"
+                            }
+                        },
+                        "required": [
+                            "servierity",
+                            "description"
+                        ],
+                        "type": "object"
+                    }
+                ],
+                "type": "array"
+            }
+        },
+        "required": [
+            "category",
+            "data"
+        ],
+        "type": "object"
+    }
+]

@@ -1,0 +1,25 @@
+[
+    {
+        "category": "background",
+        "data": "some background"
+    },
+    {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "properties": {
+            "category": {
+                "enum": [
+                    "background"
+                ],
+                "type": "string"
+            },
+            "data": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "category",
+            "data"
+        ],
+        "type": "object"
+    }
+]

@@ -1,0 +1,60 @@
+[
+    {
+        "category": "characteristics",
+        "data": {
+            "agility": 0,
+            "brawn": 0,
+            "cunning": 0,
+            "intelect": 0,
+            "presence": 0,
+            "willpower": 0
+        }
+    },
+    {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "properties": {
+            "category": {
+                "enum": [
+                    "characteristics"
+                ],
+                "type": "string"
+            },
+            "data": {
+                "properties": {
+                    "agility": {
+                        "type": "integer"
+                    },
+                    "brawn": {
+                        "type": "integer"
+                    },
+                    "cunning": {
+                        "type": "integer"
+                    },
+                    "intelect": {
+                        "type": "integer"
+                    },
+                    "presence": {
+                        "type": "integer"
+                    },
+                    "willpower": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "cunning",
+                    "brawn",
+                    "agility",
+                    "intelect",
+                    "presence",
+                    "willpower"
+                ],
+                "type": "object"
+            }
+        },
+        "required": [
+            "category",
+            "data"
+        ],
+        "type": "object"
+    }
+]

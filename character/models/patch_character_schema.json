@@ -1,0 +1,352 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "oneOf": [
+        {
+            "properties": {
+                "category": {
+                    "enum": [
+                        "background"
+                    ],
+                    "type": "string"
+                },
+                "data": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "category",
+                "data"
+            ],
+            "type": "object"
+        },
+        {
+            "properties": {
+                "category": {
+                    "enum": [
+                        "characteristics"
+                    ],
+                    "type": "string"
+                },
+                "data": {
+                    "properties": {
+                        "agility": {
+                            "type": "integer"
+                        },
+                        "brawn": {
+                            "type": "integer"
+                        },
+                        "cunning": {
+                            "type": "integer"
+                        },
+                        "intelect": {
+                            "type": "integer"
+                        },
+                        "presence": {
+                            "type": "integer"
+                        },
+                        "willpower": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "cunning",
+                        "brawn",
+                        "agility",
+                        "intelect",
+                        "presence",
+                        "willpower"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "category",
+                "data"
+            ],
+            "type": "object"
+        },
+        {
+            "properties": {
+                "category": {
+                    "enum": [
+                        "combat"
+                    ],
+                    "type": "string"
+                },
+                "data": {
+                    "properties": {
+                        "defense": {
+                            "properties": {
+                                "melee": {
+                                    "type": "integer"
+                                },
+                                "range": {
+                                    "type": "integer"
+                                }
+                            },
+                            "required": [
+                                "range",
+                                "melee"
+                            ],
+                            "type": "object"
+                        },
+                        "soak": {
+                            "type": "integer"
+                        },
+                        "strain": {
+                            "properties": {
+                                "current": {
+                                    "type": "integer"
+                                },
+                                "threshold": {
+                                    "type": "integer"
+                                }
+                            },
+                            "required": [
+                                "current",
+                                "threshold"
+                            ],
+                            "type": "object"
+                        },
+                        "wounds": {
+                            "properties": {
+                                "current": {
+                                    "type": "integer"
+                                },
+                                "threshold": {
+                                    "type": "integer"
+                                }
+                            },
+                            "required": [
+                                "current",
+                                "threshold"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "required": [
+                        "strain",
+                        "soak",
+                        "wounds",
+                        "defense"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "category",
+                "data"
+            ],
+            "type": "object"
+        },
+        {
+            "properties": {
+                "category": {
+                    "enum": [
+                        "critical_injuries"
+                    ],
+                    "type": "string"
+                },
+                "data": {
+                    "items": [
+                        {
+                            "properties": {
+                                "description": {
+                                    "type": "string"
+                                },
+                                "servierity": {
+                                    "items": {
+                                        "type": "integer"
+                                    },
+                                    "maxItems": 4,
+                                    "minItems": 4,
+                                    "type": "array"
+                                }
+                            },
+                            "required": [
+                                "servierity",
+                                "description"
+                            ],
+                            "type": "object"
+                        }
+                    ],
+                    "type": "array"
+                }
+            },
+            "required": [
+                "category",
+                "data"
+            ],
+            "type": "object"
+        },
+        {
+            "properties": {
+                "category": {
+                    "enum": [
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                "data": {
+                    "properties": {
+                        "age": {
+                            "type": "integer"
+                        },
+                        "avatar": {
+                            "type": "string"
+                        },
+                        "build": {
+                            "type": "string"
+                        },
+                        "career": {
+                            "type": "string"
+                        },
+                        "eyes": {
+                            "type": "string"
+                        },
+                        "gender": {
+                            "type": "string"
+                        },
+                        "hair": {
+                            "type": "string"
+                        },
+                        "height": {
+                            "type": "string"
+                        },
+                        "motivation": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "species": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "age",
+                        "avatar",
+                        "build",
+                        "career",
+                        "eyes",
+                        "gender",
+                        "hair",
+                        "height",
+                        "motivation",
+                        "name",
+                        "species"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "category",
+                "data"
+            ],
+            "type": "object"
+        },
+        {
+            "properties": {
+                "category": {
+                    "enum": [
+                        "experience"
+                    ],
+                    "type": "string"
+                },
+                "data": {
+                    "properties": {
+                        "available": {
+                            "type": "integer"
+                        },
+                        "total": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "available",
+                        "total"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "category",
+                "data"
+            ],
+            "type": "object"
+        },
+        {
+            "properties": {
+                "category": {
+                    "enum": [
+                        "morality"
+                    ],
+                    "type": "string"
+                },
+                "data": {
+                    "properties": {
+                        "conflict": {
+                            "type": "string"
+                        },
+                        "strength": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "integer"
+                        },
+                        "weakness": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "weakness",
+                        "strength",
+                        "value",
+                        "conflict"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "category",
+                "data"
+            ],
+            "type": "object"
+        },
+        {
+            "properties": {
+                "category": {
+                    "enum": [
+                        "obligations"
+                    ],
+                    "type": "string"
+                },
+                "data": {
+                    "items": [
+                        {
+                            "properties": {
+                                "description": {
+                                    "type": "string"
+                                },
+                                "size": {
+                                    "type": "integer"
+                                }
+                            },
+                            "required": [
+                                "description",
+                                "size"
+                            ],
+                            "type": "object"
+                        }
+                    ],
+                    "type": "array"
+                }
+            },
+            "required": [
+                "category",
+                "data"
+            ],
+            "type": "object"
+        }
+    ]
+}

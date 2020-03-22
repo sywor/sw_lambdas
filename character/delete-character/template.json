@@ -1,0 +1,364 @@
+[
+    {
+        "RequestItems": {
+            "sw_character_description": [
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "category": "description",
+                            "characterId": "CHARACTER_ID"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "category": "obligations",
+                            "characterId": "CHARACTER_ID"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "category": "morality",
+                            "characterId": "CHARACTER_ID"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "category": "experience",
+                            "characterId": "CHARACTER_ID"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "category": "combatStats",
+                            "characterId": "CHARACTER_ID"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "category": "criticalInjuries",
+                            "characterId": "CHARACTER_ID"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "category": "background",
+                            "characterId": "CHARACTER_ID"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "category": "characteristics",
+                            "characterId": "CHARACTER_ID"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "RequestItems": {
+            "sw_character_skills": [
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "astrogation"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "athletics"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "charm"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "coercion"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "computers"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "cool"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "coordination"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "deception"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "discipline"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "leadership"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "mechanics"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "medicine"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "negotiation"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "perception"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "piloting_planetery"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "piloting_space"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "resilience"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "skullduggery"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "stealth"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "streetwise"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "survival"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "vigilance"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "core_worlds"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "education"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "lore"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "RequestItems": {
+            "sw_character_skills": [
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "outer_rim"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "underworld"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "warfare"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "xenology"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "brawl"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "gunnery"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "lightsaber"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "melee"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "ranged_heavy"
+                        }
+                    }
+                },
+                {
+                    "DeleteRequest": {
+                        "Key": {
+                            "characterId": "CHARACTER_ID",
+                            "skillName": "ranged_light"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+]

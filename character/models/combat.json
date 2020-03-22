@@ -1,0 +1,95 @@
+[
+    {
+        "category": "combat",
+        "data": {
+            "defense": {
+                "melee": 0,
+                "range": 0
+            },
+            "soak": 0,
+            "strain": {
+                "current": 0,
+                "threshold": 0
+            },
+            "wounds": {
+                "current": 0,
+                "threshold": 0
+            }
+        }
+    },
+    {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "properties": {
+            "category": {
+                "enum": [
+                    "combat"
+                ],
+                "type": "string"
+            },
+            "data": {
+                "properties": {
+                    "defense": {
+                        "properties": {
+                            "melee": {
+                                "type": "integer"
+                            },
+                            "range": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "range",
+                            "melee"
+                        ],
+                        "type": "object"
+                    },
+                    "soak": {
+                        "type": "integer"
+                    },
+                    "strain": {
+                        "properties": {
+                            "current": {
+                                "type": "integer"
+                            },
+                            "threshold": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "current",
+                            "threshold"
+                        ],
+                        "type": "object"
+                    },
+                    "wounds": {
+                        "properties": {
+                            "current": {
+                                "type": "integer"
+                            },
+                            "threshold": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "current",
+                            "threshold"
+                        ],
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "strain",
+                    "soak",
+                    "wounds",
+                    "defense"
+                ],
+                "type": "object"
+            }
+        },
+        "required": [
+            "category",
+            "data"
+        ],
+        "type": "object"
+    }
+]
