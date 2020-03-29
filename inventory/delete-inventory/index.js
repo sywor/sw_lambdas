@@ -17,23 +17,32 @@ exports.handler = async (event) => {
         Key: {
             characterId: characterId,
             itemId: itemId
-        }
+        },
+        ConditionExpression: "attribute_exists(characterId) and attribute_exists(itemId)"
     };
 
-    console.log(params);
+    var request = docClient.delete(params).promise();
 
-    try {
-        await docClient.delete(params).promise();
+    return await request.then(async(data) => {
         return {
             statusCode: 204
         };
-    }
-    catch (e) {
-        return {
+    },
+    (error) => {
+
+        console.error(error);
+
+        if (error.code === "ConditionalCheckFailedException") {
+            throw new Error(JSON.stringify({
+                statusCode: 404,
+                reason: "character or item not found"
+            }));
+        }
+
+        throw new Error(JSON.stringify({
             statusCode: 500,
-            body: {
-                error: e
-            }
-        };
-    }
+            reason: "dynamoDB error",
+            code: error.code
+        }));
+    });
 };

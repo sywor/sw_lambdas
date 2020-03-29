@@ -46,7 +46,28 @@ function generateInventoryBatches(inventoryBatches, inventory, index) {
     }
 }
 
-exports.handler = async (event) => {
+async function write(batch) {
+    var result = docClient.batchWrite(batch).promise();
+
+    await result.then(async(data) => {
+
+            var params = {};
+            params.RequestItems = data.UnprocessedItems;
+
+            if (Object.keys(params.RequestItems).length != 0) {
+                await write(params);
+            }
+        },
+        (error) => {
+            throw new Error(JSON.stringify({
+                statusCode: 500,
+                reason: "dynamoDB error",
+                error: error
+            }));
+        });
+}
+
+exports.handler = async(event) => {
 
     var characterId = event.characterId;
     var data = fs.readFileSync('./template.json', "utf8");
@@ -69,28 +90,11 @@ exports.handler = async (event) => {
         generateInventoryBatches(batches, inventoryDelReq, 0);
     }
 
-    try {
-
-        for (let index = 0; index < batches.length; index++) {
-
-            let batch = batches[index];
-            var result = await docClient.batchWrite(batch).promise();
-
-            if (Object.keys(result.UnprocessedItems) !== 0) {
-                console.log(`Unprocessed items for character: ${characterId}\nItems: ${JSON.stringify(result.UnprocessedItems)}`);
-            }
-        }
-
-        return {
-            statusCode: 204
-        };
+    for (let index = 0; index < batches.length; index++) {
+        await write(batches[index]);
     }
-    catch (error) {
-        return {
-            statusCode: 500,
-            body: {
-                error: error
-            }
-        };
-    }
+
+    return {
+        statusCode: 204
+    };
 };

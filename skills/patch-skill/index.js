@@ -26,24 +26,35 @@ exports.handler = async (event) => {
         ExpressionAttributeNames: {
             "#skill": "skill",
         },
-        ReturnValues: "UPDATED_NEW"
+        ReturnValues: "UPDATED_NEW",
+        ConditionExpression: "attribute_exists(characterId) and attribute_exists(skillName)"
     };
 
-    try {
-        const response = await docClient.update(params).promise();
+    var request = docClient.update(params).promise();
+
+    return await request.then(async (data) => {
         return {
             statusCode: 200,
             body: {
-                [skill.skillName]: response.Attributes.skill
+                [skill.skillName]: data
             }
         };
-    }
-    catch (e) {
-        return {
-            statusCode: 500,
-            body: {
-                error: e
+    },
+        (error) => {
+
+            console.error(error);
+
+            if (error.code === "ConditionalCheckFailedException") {
+                throw new Error(JSON.stringify({
+                    statusCode: 404,
+                    reason: "character or skill not found"
+                }));
             }
-        };
-    }
+
+            throw new Error(JSON.stringify({
+                statusCode: 500,
+                reason: "dynamoDB error",
+                code: error.code
+            }));
+        });
 };

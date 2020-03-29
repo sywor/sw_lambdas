@@ -6,7 +6,7 @@ const docClient = new AWS.DynamoDB.DocumentClient({
     apiVersion: '2012-08-10'
 });
 
-exports.handler = async (event) => {
+exports.handler = async(event) => {
 
     var patch = event.patch;
 
@@ -23,24 +23,36 @@ exports.handler = async (event) => {
         ExpressionAttributeNames: {
             "#data": "data",
         },
+        ConditionExpression: "attribute_exists(characterId)",
         ReturnValues: "UPDATED_NEW"
     };
 
-    try {
-        const response = await docClient.update(params).promise();
-        return {
-            statusCode: 200,
-            body: {
-                [patch.category]: response.Attributes.data
+    const response = docClient.update(params).promise();
+
+    return await response.then(async(data) => {
+
+            return {
+                statusCode: 200,
+                body: {
+                    [patch.category]: data
+                }
+            };
+        },
+        (error) => {
+
+            console.error(error);
+
+            if (error.code === "ConditionalCheckFailedException") {
+                throw new Error(JSON.stringify({
+                    statusCode: 404,
+                    reason: "character not found"
+                }));
             }
-        };
-    }
-    catch (e) {
-        return {
-            statusCode: 500,
-            body: {
-                error: e
-            }
-        };
-    }
+
+            throw new Error(JSON.stringify({
+                statusCode: 500,
+                reason: "dynamoDB error",
+                code: error.code
+            }));
+        });
 };

@@ -1,0 +1,387 @@
+[
+    {
+        "career": false,
+        "pool": [
+            2,
+            2,
+            2,
+            2,
+            0
+        ],
+        "skillName": "astrogation"
+    },
+    {
+        "career": true,
+        "pool": [
+            2,
+            2,
+            0,
+            0,
+            0
+        ],
+        "skillName": "athletics"
+    },
+    {
+        "career": true,
+        "pool": [
+            1,
+            2,
+            2,
+            0,
+            0
+        ],
+        "skillName": "charm"
+    },
+    {
+        "career": false,
+        "pool": [
+            2,
+            2,
+            0,
+            0,
+            0
+        ],
+        "skillName": "coercion"
+    },
+    {
+        "career": false,
+        "pool": [
+            2,
+            2,
+            2,
+            2,
+            0
+        ],
+        "skillName": "computers"
+    },
+    {
+        "career": true,
+        "pool": [
+            1,
+            2,
+            2,
+            0,
+            0
+        ],
+        "skillName": "cool"
+    },
+    {
+        "career": false,
+        "pool": [
+            2,
+            2,
+            2,
+            0,
+            0
+        ],
+        "skillName": "coordination"
+    },
+    {
+        "career": true,
+        "pool": [
+            1,
+            1,
+            2,
+            0,
+            0
+        ],
+        "skillName": "deception"
+    },
+    {
+        "career": false,
+        "pool": [
+            2,
+            2,
+            0,
+            0,
+            0
+        ],
+        "skillName": "discipline"
+    },
+    {
+        "career": true,
+        "pool": [
+            1,
+            1,
+            2,
+            0,
+            0
+        ],
+        "skillName": "leadership"
+    },
+    {
+        "career": false,
+        "pool": [
+            2,
+            2,
+            2,
+            2,
+            0
+        ],
+        "skillName": "mechanics"
+    },
+    {
+        "career": true,
+        "pool": [
+            1,
+            1,
+            1,
+            1,
+            3
+        ],
+        "skillName": "medicine"
+    },
+    {
+        "career": true,
+        "pool": [
+            1,
+            2,
+            2,
+            0,
+            0
+        ],
+        "skillName": "negotiation"
+    },
+    {
+        "career": false,
+        "pool": [
+            2,
+            2,
+            2,
+            0,
+            0
+        ],
+        "skillName": "perception"
+    },
+    {
+        "career": false,
+        "pool": [
+            2,
+            2,
+            2,
+            0,
+            0
+        ],
+        "skillName": "piloting_planetery"
+    },
+    {
+        "career": false,
+        "pool": [
+            2,
+            2,
+            2,
+            0,
+            0
+        ],
+        "skillName": "piloting_space"
+    },
+    {
+        "career": true,
+        "pool": [
+            2,
+            2,
+            0,
+            0,
+            0
+        ],
+        "skillName": "resilience"
+    },
+    {
+        "career": false,
+        "pool": [
+            2,
+            2,
+            2,
+            0,
+            0
+        ],
+        "skillName": "skullduggery"
+    },
+    {
+        "career": false,
+        "pool": [
+            2,
+            2,
+            2,
+            0,
+            0
+        ],
+        "skillName": "stealth"
+    },
+    {
+        "career": true,
+        "pool": [
+            2,
+            2,
+            2,
+            0,
+            0
+        ],
+        "skillName": "streetwise"
+    },
+    {
+        "career": true,
+        "pool": [
+            2,
+            2,
+            2,
+            0,
+            0
+        ],
+        "skillName": "survival"
+    },
+    {
+        "career": true,
+        "pool": [
+            2,
+            2,
+            0,
+            0,
+            0
+        ],
+        "skillName": "vigilance"
+    },
+    {
+        "career": true,
+        "pool": [
+            1,
+            2,
+            2,
+            2,
+            0
+        ],
+        "skillName": "core_worlds"
+    },
+    {
+        "career": true,
+        "pool": [
+            2,
+            2,
+            2,
+            2,
+            0
+        ],
+        "skillName": "education"
+    },
+    {
+        "career": true,
+        "pool": [
+            2,
+            2,
+            2,
+            2,
+            0
+        ],
+        "skillName": "lore"
+    },
+    {
+        "career": false,
+        "pool": [
+            2,
+            2,
+            2,
+            2,
+            0
+        ],
+        "skillName": "outer_rim"
+    },
+    {
+        "career": false,
+        "pool": [
+            2,
+            2,
+            2,
+            2,
+            0
+        ],
+        "skillName": "underworld"
+    },
+    {
+        "career": true,
+        "pool": [
+            2,
+            2,
+            2,
+            2,
+            0
+        ],
+        "skillName": "warfare"
+    },
+    {
+        "career": true,
+        "pool": [
+            2,
+            2,
+            2,
+            2,
+            0
+        ],
+        "skillName": "xenology"
+    },
+    {
+        "career": true,
+        "pool": [
+            2,
+            2,
+            0,
+            0,
+            0
+        ],
+        "skillName": "brawl"
+    },
+    {
+        "career": false,
+        "pool": [
+            2,
+            2,
+            2,
+            0,
+            0
+        ],
+        "skillName": "gunnery"
+    },
+    {
+        "career": false,
+        "pool": [
+            2,
+            2,
+            0,
+            0,
+            0
+        ],
+        "skillName": "lightsaber"
+    },
+    {
+        "career": true,
+        "pool": [
+            2,
+            2,
+            0,
+            0,
+            0
+        ],
+        "skillName": "melee"
+    },
+    {
+        "career": true,
+        "pool": [
+            1,
+            1,
+            1,
+            0,
+            0
+        ],
+        "skillName": "ranged_heavy"
+    },
+    {
+        "career": true,
+        "pool": [
+            1,
+            1,
+            2,
+            0,
+            0
+        ],
+        "skillName": "ranged_light"
+    }
+]

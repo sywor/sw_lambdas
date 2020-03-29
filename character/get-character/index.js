@@ -67,6 +67,15 @@ exports.handler = async(event) => {
         }, {});
     }
 
+    if (Object.keys(character).length === 0 &&
+        Object.keys(skills).length === 0 &&
+        Object.keys(inventory).length === 0) {
+
+        throw new Error(JSON.stringify({
+            statusCode: 404,
+            reason: "character not found"
+        }));
+    }
     return {
         statusCode: 200,
         body: {
@@ -75,4 +84,5 @@ exports.handler = async(event) => {
             "inventory": inventory
         }
     };
+
 };

@@ -37,7 +37,7 @@
                 {
                     "DeleteRequest": {
                         "Key": {
-                            "category": "combatStats",
+                            "category": "combat",
                             "characterId": "CHARACTER_ID"
                         }
                     }
@@ -45,7 +45,7 @@
                 {
                     "DeleteRequest": {
                         "Key": {
-                            "category": "criticalInjuries",
+                            "category": "critical_injuries",
                             "characterId": "CHARACTER_ID"
                         }
                     }

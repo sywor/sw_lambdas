@@ -8,7 +8,38 @@ const docClient = new AWS.DynamoDB.DocumentClient({
 
 });
 
-exports.handler = async(event) => {
+async function checkIfCharacterExist(characterId) {
+    var params = {
+        TableName: "sw_character_description",
+        KeyConditionExpression: "characterId = :characterId",
+        ExpressionAttributeValues: {
+            ":characterId": characterId
+        }
+    };
+
+    try {
+        return await docClient.query(params).promise();
+    }
+    catch (e) {
+        console.log(e);
+        return null;
+    }
+}
+
+
+exports.handler = async (event) => {
+
+    var queryResult = await checkIfCharacterExist(event.characterId);
+    
+    console.log(queryResult);
+
+    if (queryResult.Count === 0) {
+        throw new Error(JSON.stringify({
+            statusCode: 404,
+            reason: "character not found"
+        }));
+    }
+
     var itemId = uuid.v4();
 
     var params = {
@@ -16,26 +47,26 @@ exports.handler = async(event) => {
         Item: {
             characterId: event.characterId,
             itemId: itemId,
-            itemType: event.itemType,
-            item: event.inventoryItem
+            item: event.item
         }
     };
 
-    try {
-        await docClient.put(params).promise();
+    var request = docClient.put(params).promise();
+
+    return await request.then(async (data) => {
         return {
             statusCode: 200,
             body: {
                 itemId: itemId
             }
         };
-    }
-    catch (e) {
-        return {
-            statusCode: 500,
-            body: {
-                error: e
-            }
-        };
-    }
+    },
+        (error) => {
+
+            throw new Error(JSON.stringify({
+                statusCode: 500,
+                reason: "dynamoDB error",
+                code: error.code
+            }));
+        });
 };

@@ -14,14 +14,14 @@ exports.handler = async (event) => {
     var item = event.inventoryItem;
 
     var expressionParts = [
-        "#item.#equiped = :equiped",
+        "#item.#equipped = :equipped",
         "#item.#condition = :condition",
         "#item.#modification = :modification",
         "#item.#count = :count"
     ];
 
     var expressionValues = {
-        ":equiped": item.equiped,
+        ":equipped": item.equipped,
         ":condition": item.condition,
         ":modification": item.modification,
         ":count": item.count
@@ -29,7 +29,7 @@ exports.handler = async (event) => {
 
     var attributeNames = {
         "#item": "item",
-        "#equiped": "equiped",
+        "#equipped": "equipped",
         "#condition": "condition",
         "#modification": "modification",
         "#count": "count"
@@ -44,22 +44,33 @@ exports.handler = async (event) => {
         UpdateExpression: "set " + expressionParts.join(", "),
         ExpressionAttributeValues: expressionValues,
         ExpressionAttributeNames: attributeNames,
-        ReturnValues: "UPDATED_NEW"
+        ReturnValues: "UPDATED_NEW",
+        ConditionExpression: "attribute_exists(characterId) and attribute_exists(itemId)"
     };
 
-    try {
-        const response = await docClient.update(params).promise();
+    var request = docClient.update(params).promise();
+
+    return await request.then(async(data) => {
         return {
             statusCode: 200,
-            body: response
+            body: data
         };
-    }
-    catch (e) {
-        return {
+    },
+    (error) => {
+
+        console.error(error);
+
+        if (error.code === "ConditionalCheckFailedException") {
+            throw new Error(JSON.stringify({
+                statusCode: 404,
+                reason: "character or item not found"
+            }));
+        }
+
+        throw new Error(JSON.stringify({
             statusCode: 500,
-            body: {
-                error: e
-            }
-        };
-    }
+            reason: "dynamoDB error",
+            code: error.code
+        }));
+    });
 };
